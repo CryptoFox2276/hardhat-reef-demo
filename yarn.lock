@@ -2418,6 +2418,11 @@
   resolved "https://registry.yarnpkg.com/@open-web3/scanner/-/scanner-1.0.1.tgz#4593db0ef7c70cee5e3a811ffff4869933aa4939"
   integrity sha512-Abc88uNGf2Ef5ms+6cyzU18shIKiQoMgsvXPTzaqiDDdZCXaLTrDQPzvRwvM+ceTxSB3C9NZTTcx32OyQu1HDw==
 
+"@openzeppelin/contracts@^4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.9.0.tgz#683f33b6598970051bc5f0806fd8660da9e018dd"
+  integrity sha512-DUP74AFGKlic2sQb/CmgrN2aUPMFGxRrmCTUxLHsiU2RzwWqVuMPZBxiAyvlff6Pea77uylAX6B5x9W6evEbhA==
+
 "@polkadot/api-derive@6.4.2", "@polkadot/api-derive@~6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-6.4.2.tgz#1f63765285cc308beff20729e06b937b40d9a2c2"
