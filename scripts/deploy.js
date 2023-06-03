@@ -1,27 +1,35 @@
 const hre = require('hardhat')
+const axios = require('axios');
+const keccak256 = require("keccak256");
+const {MerkleTree} = require("merkletreejs");
+const {whiteList} = require("./whitelist");
 
 async function main() {
-    const alice = await hre.reef.getSignerByName("testnet_account")
-    await alice.claimDefaultAccount()
+    await hre.run("compile");
 
-    const Greeter = await hre.reef.getContractFactory("Greeter", alice)
-    const args = ["Hello world!"];
-    const greeter = await Greeter.deploy(...args)
-    await greeter.deployed()
+    // const signer = await hre.reef.getSignerByName("mainnet_account")
+    const signer = await hre.reef.getSignerByName("testnet_account")
+    await signer.claimDefaultAccount()
+
+    const CoralwaveContract = await hre.reef.getContractFactory("CoralwaveReefLasMeta", signer)
+    const args = [];
+    const coralwaveContract = await CoralwaveContract.deploy()
+    await coralwaveContract.deployed()
 
     console.log({
-        greeter_contract_address: greeter.address,
+        coralwaveContract_contract_address: coralwaveContract.address,
     })
 
-    const ver_greeter = await hre.reef.verifyContract(greeter.address, "Greeter", ...args)
+    const ver_coralwaveContract = await hre.reef.verifyContract(coralwaveContract.address, "CoralwaveReefLasMeta", [])
     
-    console.log(ver_greeter);
+    console.log(ver_coralwaveContract);
 
-    console.log("Initial value:", await greeter.greet())
+    let leaves = whiteList.map(addr => keccak256(addr));
+    let tree = new MerkleTree(leaves, keccak256, {sort: true});
+    let root = tree.getRoot().toString("hex");
+    await coralwaveContract.setMerkleRoot(tree.getHexRoot());
 
-    await greeter.setGreeting("Good Morning!");
-
-    console.log("New value:", await greeter.greet())
+    await coralwaveContract.setEnableMint(true);
 }
 
 main()

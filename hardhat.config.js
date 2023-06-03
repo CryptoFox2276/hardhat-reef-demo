@@ -20,10 +20,11 @@ module.exports = {
       // url: "wss://rpc-testnet.reefscan.info/ws",
       // scanUrl: "https://api-testnet.reefscan.info", 
       url: "wss://rpc-testnet.reefscan.com/ws",
-      scanUrl: "https://testnet.reefscan.com", 
+      scanUrl: "https://testnet.reefscan.com",
       seeds: {
         testnet_account: `${process.env.MNEMONIC_SEEDS}`, // SEED GOES HERE
       },
+      timeout: 200000,
     },
     reef_mainnet: {
       // url: "wss://rpc.reefscan.info/ws",
