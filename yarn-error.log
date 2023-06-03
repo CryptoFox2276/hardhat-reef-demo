@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add @openzeppelin/contracts
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add keccak256 merkletreej
 
 PATH: 
   C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Users\hi\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PostgreSQL\15\bin;C:\Users\hi\AppData\Local\Programs\Python\Python310;C:\Users\hi\AppData\Local\Programs\Python\Python310\Scripts;C:\flutter\bin;C:\Program Files\Java\jdk-18\bin;C:\Program Files\Java\jdk-18\lib;C:\Users\hi\AppData\Local\Android\Sdk\emulator;C:\Users\hi\AppData\Local\Android\Sdk\platform-tools;C:\WebDriver;C:\xampp74\php;C:\ProgramData\ComposerSetup\bin;C:\Users\hi\AppData\Local\Android\Sdk\tools;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\hi\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\hi\.cargo\bin;D:\1.ToolShop\1.DevTools\Java\apache-maven-3.8.5\bin;C:\Gradle\gradle-8.1.1\bin;D:\1.ToolShop\1.DevTools\Java\spring-2.5.0\bin;C:\Program Files\Bitcoin\daemon;D:\1.ToolShop\1.DevTools\Blockchain\ord-0.5.2-x86_64-pc-windows-msvc;C:\Users\hi\.cargo\bin;C:\Users\hi\AppData\Local\Microsoft\WindowsApps;C:\Users\hi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hi\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\WebStorm 2022.2.3\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-18\bin;C:\Users\hi\AppData\Roaming\Composer\vendor\bin;C:\Users\hi\AppData\Local\Programs\EmEditor;C:\Users\hi\AppData\Local\GitHubDesktop\bin
@@ -14,14 +14,25 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+  Error: https://registry.yarnpkg.com/merkletreej: Not found
+      at params.callback [as _callback] (C:\Users\hi\AppData\Roaming\nvm\v18.12.1\node_modules\yarn\lib\cli.js:66145:18)
+      at self.callback (C:\Users\hi\AppData\Roaming\nvm\v18.12.1\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (C:\Users\hi\AppData\Roaming\nvm\v18.12.1\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (C:\Users\hi\AppData\Roaming\nvm\v18.12.1\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
     "dependencies": {
       "@nomiclabs/hardhat-ethers": "^2.2.3",
+      "@openzeppelin/contracts": "^4.9.0",
       "@reef-defi/hardhat-reef": "^1.0.13",
+      "chai": "^4.3.7",
       "dotenv": "^16.0.3",
       "hardhat": "^2.14.0"
     }
@@ -2451,6 +2462,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@open-web3/scanner/-/scanner-1.0.1.tgz#4593db0ef7c70cee5e3a811ffff4869933aa4939"
     integrity sha512-Abc88uNGf2Ef5ms+6cyzU18shIKiQoMgsvXPTzaqiDDdZCXaLTrDQPzvRwvM+ceTxSB3C9NZTTcx32OyQu1HDw==
   
+  "@openzeppelin/contracts@^4.9.0":
+    version "4.9.0"
+    resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.9.0.tgz#683f33b6598970051bc5f0806fd8660da9e018dd"
+    integrity sha512-DUP74AFGKlic2sQb/CmgrN2aUPMFGxRrmCTUxLHsiU2RzwWqVuMPZBxiAyvlff6Pea77uylAX6B5x9W6evEbhA==
+  
   "@polkadot/api-derive@6.4.2", "@polkadot/api-derive@~6.4.2":
     version "6.4.2"
     resolved "https://registry.yarnpkg.com/@polkadot/api-derive/-/api-derive-6.4.2.tgz#1f63765285cc308beff20729e06b937b40d9a2c2"
@@ -3434,6 +3450,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
     integrity sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw==
   
+  assertion-error@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
+    integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
+  
   assign-symbols@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
@@ -3950,6 +3971,19 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/catering/-/catering-2.1.1.tgz#66acba06ed5ee28d5286133982a927de9a04b510"
     integrity sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==
   
+  chai@^4.3.7:
+    version "4.3.7"
+    resolved "https://registry.yarnpkg.com/chai/-/chai-4.3.7.tgz#ec63f6df01829088e8bf55fca839bcd464a8ec51"
+    integrity sha512-HLnAzZ2iupm25PlN0xFreAlBA5zaBSv3og0DdeGA4Ar6h6rJ3A0rolRUKJhSF2V10GZKDgWF/VmAEsNWjCRB+A==
+    dependencies:
+      assertion-error "^1.1.0"
+      check-error "^1.0.2"
+      deep-eql "^4.1.2"
+      get-func-name "^2.0.0"
+      loupe "^2.3.1"
+      pathval "^1.1.1"
+      type-detect "^4.0.5"
+  
   chalk@^2.0.0, chalk@^2.4.2:
     version "2.4.2"
     resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -3992,6 +4026,11 @@ Lockfile:
     version "0.7.0"
     resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
     integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
+  
+  check-error@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
+    integrity sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==
   
   chokidar@3.5.3, chokidar@^3.4.0:
     version "3.5.3"
@@ -4448,6 +4487,13 @@ Lockfile:
     integrity sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==
     dependencies:
       mimic-response "^3.1.0"
+  
+  deep-eql@^4.1.2:
+    version "4.1.3"
+    resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-4.1.3.tgz#7c7775513092f7df98d8df9996dd085eb668cc6d"
+    integrity sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw==
+    dependencies:
+      type-detect "^4.0.0"
   
   deep-extend@^0.6.0:
     version "0.6.0"
@@ -5791,6 +5837,11 @@ Lockfile:
     version "2.0.5"
     resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
     integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
+  
+  get-func-name@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.0.tgz#ead774abee72e20409433a066366023dd6887a41"
+    integrity sha512-Hm0ixYtaSZ/V7C8FJrtZIuBBI+iSgL+1Aq82zSu8VQNB4S3Gk8e7Qs3VwBDJAhmRZcFqkl3tQu36g/Foh5I5ig==
   
   get-intrinsic@^1.0.2, get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.0:
     version "1.2.0"
@@ -7634,6 +7685,13 @@ Lockfile:
     dependencies:
       js-tokens "^3.0.0 || ^4.0.0"
   
+  loupe@^2.3.1:
+    version "2.3.6"
+    resolved "https://registry.yarnpkg.com/loupe/-/loupe-2.3.6.tgz#76e4af498103c532d1ecc9be102036a21f787b53"
+    integrity sha512-RaPMZKiMy8/JruncMU5Bt6na1eftNoo++R4Y+N2FrxkDVTrGvcyzFTsaGif4QTeKESheMGegbhw6iUAq+5A8zA==
+    dependencies:
+      get-func-name "^2.0.0"
+  
   lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
@@ -8483,6 +8541,11 @@ Lockfile:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
     integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
+  
+  pathval@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
+    integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
   
   pbkdf2@^3.0.17:
     version "3.1.2"
@@ -10041,7 +10104,7 @@ Lockfile:
     dependencies:
       prelude-ls "~1.1.2"
   
-  type-detect@4.0.8:
+  type-detect@4.0.8, type-detect@^4.0.0, type-detect@^4.0.5:
     version "4.0.8"
     resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
     integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==

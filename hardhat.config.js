@@ -6,6 +6,12 @@ module.exports = {
   solidity: "0.8.4",
   defaultNetwork: "reef",
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545",
+      forking: {
+        url: "wss://rpc.reefscan.com/ws",
+      }
+    },
     reef: {
       url: "ws://substrate-node:9944",
       scanUrl: "<http://api:8000>",
